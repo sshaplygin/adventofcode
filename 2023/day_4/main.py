@@ -1,4 +1,4 @@
-def get_text(is_test = False):
+def parse_input(is_test = False):
     if is_test: 
         return [
             'Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53',
@@ -37,10 +37,10 @@ def total_scratchcards(text: list[str]):
         l = len(parse_nums(win_nums) & parse_nums(nums_str))
         for _ in range(arr[idx]):
             for i in range(l):
-                arr[idx + i + 1] += arr[idx] + 
+                arr[idx + i + 1] += 1
     return sum(arr)
 
 if __name__ == '__main__':
-    text = get_text()
-    print(total_points(text))
-    print(total_scratchcards(text))
+    data = parse_input(True)
+    print(total_points(data))
+    print(total_scratchcards(data))

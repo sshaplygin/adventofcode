@@ -1,4 +1,4 @@
-def get_text(is_test = False):
+def parse_input(is_test = False):
     if is_test: 
         return [
             '467..114..',
@@ -58,5 +58,5 @@ def make_matrix(text):
     return arr
 
 if __name__ == '__main__':
-    text = get_text()
-    print(sum_parts(make_matrix(text)))
+    data = parse_input(True)
+    print(sum_parts(make_matrix(data)))

@@ -1,5 +1,5 @@
 
-def get_text(is_test = False):
+def parse_input(is_test = False):
     if is_test: 
         return [
             'Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green',
@@ -68,6 +68,6 @@ def count_cubes_power(text):
     return count
 
 if __name__ == '__main__':
-    text = get_text()
-    print(count_possible(text))
-    print(count_cubes_power(text))
+    data = parse_input(True)
+    print(count_possible(data))
+    print(count_cubes_power(data))

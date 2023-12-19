@@ -1,3 +1,21 @@
+def parse_input(is_test = False):
+    if is_test: 
+        return [
+            'two1nine',
+            'eightwothree',
+            'abcone2threexyz',
+            'xtwone3four',
+            '4nineeightseven2',
+            'zoneight234',
+            '7pqrstsixteen'
+        ]
+    text = []
+    with open('input.txt', 'r') as file:
+        for line in file:
+            text.append(line.strip())
+    
+    return text
+
 def countCalibrationValue(text):
     count = 0
     for row in text:
@@ -87,29 +105,10 @@ def init_vars():
         inversed_numbers[n] = numbers[word]
         inversed_trie.insert(n)
 
-def load_text(is_test = False):
-    if is_test: 
-        return [
-            'two1nine',
-            'eightwothree',
-            'abcone2threexyz',
-            'xtwone3four',
-            '4nineeightseven2',
-            'zoneight234',
-            '7pqrstsixteen'
-        ]
-    text = []
-    with open('input.txt', 'r') as file:
-        for line in file:
-            text.append(line.strip())
-    
-    return text
-
 if __name__ == '__main__':
     init_vars()
 
-    text = load_text()
+    data = parse_input(True)
 
-    print(countCalibrationValue(text))
-    print(countRealCalibrationValue(text))
-    
+    print(countCalibrationValue(data))
+    print(countRealCalibrationValue(data))

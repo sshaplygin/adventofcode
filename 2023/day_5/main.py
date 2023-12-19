@@ -1,5 +1,5 @@
 
-def get_input(is_test = False):
+def pase_input(is_test = False):
     if is_test: 
         return [
             'seeds: 79 14 55 13',
@@ -45,10 +45,6 @@ def get_input(is_test = False):
 
 # [seeds, seeds2soil, soil2fertilizer, fertilizer2water, water2light, light2temperature, temperature2humidity, humidity2location]
 
-def pase_input(text):
-
-    pass
-
 if __name__ == '__main__':
-    raw_data = get_input()
+    data = pase_input()
     
